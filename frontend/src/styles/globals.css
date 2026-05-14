@@ -1,0 +1,62 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-dark-900 text-white;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-thread-600 text-white rounded-lg font-medium hover:bg-thread-700 active:scale-95 transition-all duration-150 shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-dark-700 text-white rounded-lg font-medium hover:bg-dark-600 border border-dark-600 transition-all duration-150;
+  }
+
+  .card-premium {
+    @apply bg-dark-800 rounded-2xl border border-dark-700 shadow-premium backdrop-blur-sm;
+  }
+
+  .input-modern {
+    @apply w-full px-4 py-3 bg-dark-700 border border-dark-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-thread-500 focus:ring-1 focus:ring-thread-500 transition-all duration-150;
+  }
+
+  .gradient-thread {
+    @apply bg-gradient-to-r from-thread-600 via-thread-500 to-thread-700;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Thread simulation effect */
+.thread-effect {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, rgba(195, 155, 105, 0.1) 0%, transparent 100%);
+}
+
+/* Embroidery texture */
+.embroidery-canvas {
+  background: 
+    linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.1) 75%);
+  background-size: 3px 3px;
+  background-position: 0 0, 0 1.5px, 1.5px -1.5px, -1.5px 0px;
+}
